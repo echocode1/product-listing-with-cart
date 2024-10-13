@@ -51,17 +51,35 @@ export const OrderSummary = ({
                                     </Typography>
                                 </Stack>
 
-                                <img 
-                                    src="/assets/images/icon-remove-item.svg" 
-                                    alt="remove-icon"
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width= "20"
+                                    height = "20"
                                     onClick={() => handleDecrement(index)}
                                     style={{
                                         border: "1px solid #c9aea6",
                                         borderRadius: "50%",
                                         padding: "4px",
-                                        height: "20px"
+                                        height: "20px",
+                                        cursor: "pointer"
                                     }}
-                                />
+
+                                    onMouseOver={(e) => {
+                                        const target = e.currentTarget as SVGSVGElement;
+                                        target.querySelector("path")?.setAttribute("fill", "#000");
+                                        e.currentTarget.style.border = "0.8px solid #000"
+                                    }}
+                                    onMouseOut={(e) => {
+                                        const target = e.currentTarget as SVGSVGElement;
+                                        target.querySelector("path")?.setAttribute("fill", "#CAAFA7")
+                                        e.currentTarget.style.border = "0.8px solid #CAAFA7"
+                                    }}
+                                >
+                                  <path
+                                    fill = "#CAAFA7" 
+                                    d = "M8.375 9.375 5 6 1.625 9.375l-1-1L4 5 .625 1.625l1-1L5 4 8.375.625l1 1L6 5l3.375 3.375-1 1Z"  
+                                  />
+                                </svg>
                             </Stack>
                             <hr 
                                 style={{

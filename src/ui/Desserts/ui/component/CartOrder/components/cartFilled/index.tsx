@@ -112,7 +112,8 @@ export const CartFilled = () => {
                         textTransform: "none",
                         width: "100%",
                         padding: "12px 0",
-                        borderRadius: "25px"
+                        borderRadius: "25px",
+                        "&:hover": {backgroundColor: "#982c0b"}
                     }}
                 >
                     <Typography

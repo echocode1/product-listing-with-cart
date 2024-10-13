@@ -19,7 +19,11 @@ export const AddToCart = ({
                 bottom: -15,
                 left: "50%",
                 translate: "-50%",
-                zIndex: 100
+                zIndex: 100,
+                transition: "0.3s ease",
+                "&:hover": {
+                    border: "0.8px solid #c73a0f"
+                }
             }}
         >
             <img 
@@ -33,7 +37,8 @@ export const AddToCart = ({
                     fontSize: "14px",
                     marginLeft: "10px",
                     color: "#260f08",
-                    textTransform: "none"
+                    textTransform: "none",
+                    "&:hover" : { color: "#c73a0f"}
                 }}
             >
                 Add to Cart
