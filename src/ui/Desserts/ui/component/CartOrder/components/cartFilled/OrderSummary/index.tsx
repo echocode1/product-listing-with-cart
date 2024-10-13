@@ -1,6 +1,5 @@
 import { Box, Stack, Typography} from "@mui/material";
 import { OrderSummaryProps } from "@/ui/types/type";
-/* eslint-disable rule-name */
 
 export const OrderSummary = ({
     Data, 
