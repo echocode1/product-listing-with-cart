@@ -18,7 +18,7 @@ export const CartEmpty = () => {
                 flexDirection: "column",
                 margin: "30px 0 20px",
                 alignItems: "center",
-                backgroundColor: "#ffff",
+                backgroundColor: "#fff",
                 padding: "20px",
                 borderRadius: "10px",
             }}
