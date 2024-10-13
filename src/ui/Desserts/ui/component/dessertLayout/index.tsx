@@ -7,7 +7,7 @@ export const DessertLayouts = () => {
     return(
         <Box 
             sx={{
-                backgroundColor: "#f4edeb",
+                backgroundColor: "f4edeb",
                 display: "grid",
                 gridTemplateColumns:{
                    xs: "1fr" ,
@@ -17,10 +17,10 @@ export const DessertLayouts = () => {
                 padding: {
                     xs: "25px" ,
                     sm: "35px",
-                    lg: "65px 110px"
+                    lg: "85px 100px 65px 100px"
                 },
                 gap: "20px",
-                height: "100%",
+                height: "1024px",
             }}
         >
             <DessertData/>
