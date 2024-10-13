@@ -3,6 +3,7 @@ import { Box, Stack, Typography, Grid2} from "@mui/material";
 import { AddToCart } from "./components/Add_To_CartBtn";
 import { Dec_Inc_button } from "./components/Dec_Inc_Button";
 import { useCartContext } from "@/ui/CartProvider/index";
+import Image from "next/image";
 
 export const DessertData = () => {
     const {
@@ -38,23 +39,50 @@ export const DessertData = () => {
                     return(
                         <Box key={index}>
                             <Box position={"relative"}>
-                                <img 
-                                    srcSet={`${data.image.mobile} 480w,
-                                        ${data.image.tablet} 768w,
-                                        ${data.image.desktop} 1024`}
+                                <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+                                    <Image
+                                        src={data.image.mobile}
+                                        alt={`${data.category}-img`}
+                                        height={1000}
+                                        width={1000}
+                                        style={{ 
+                                            borderRadius: "7px", 
+                                            width: "100%",
+                                            height: "auto",
+                                            objectFit: "cover"
+                                        }}
+                                    />
+                                </Box>
+                                <Box sx={{ display: { xs: 'none', md: 'block', lg: 'none' } }}>
+                                    <Image
+                                        src={data.image.tablet}
+                                        alt={`${data.category}-img`}
+                                        height={1000}
+                                        width={1000} 
+                                        style={{ 
+                                            borderRadius: "7px", 
+                                            width: "100%",
+                                            height: "auto",
+                                            objectFit: "cover"
+                                        }}
                                     
-                                    sizes="(max-width: 480px) 480px,
-                                        (max-width: 768px) 768px,
-                                        1024px"
+                                    />
+                                </Box>
+                                <Box sx={{  display: { lg: 'block', xs: 'none' } }}>
+                                    <Image
+                                        src={data.image.desktop}
+                                        alt={`${data.category}-img`}
+                                        height={1000}
+                                        width={1000}
+                                        style={{ 
+                                            borderRadius: "7px", 
+                                            width: "100%",
+                                            height: "auto",
+                                            objectFit: "cover"
+                                        }}
+                                    />
+                                </Box>
 
-                                    src={data.image.desktop} 
-                                    alt={`${data.category}-img`} 
-                                    style={{
-                                        width: "100%",
-                                        borderRadius: "7px",
-                                        border: isAddedToCart[index] ? "2px solid #c73a0f" : 'none',
-                                    }}
-                                />
                                 {!isAddedToCart[index] && 
                                     <AddToCart handleAddToCart = {() => handleAddToCart(index)} />
                                 }

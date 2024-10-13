@@ -1,5 +1,6 @@
 import { addToCartVisibility } from "@/ui/types/type"
 import { Button,Typography } from "@mui/material"
+import Image from "next/image"
 
 export const AddToCart = ({
     handleAddToCart}:addToCartVisibility) => {
@@ -26,9 +27,11 @@ export const AddToCart = ({
                 }
             }}
         >
-            <img 
+            <Image
                 src= "/assets/images/icon-add-to-cart.svg"  
                 alt="cart-icon" 
+                width={18}
+                height={18}
             />
 
             <Typography

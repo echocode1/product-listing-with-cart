@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Box, Stack, Typography, Button } from "@mui/material";
 import { useCartContext } from "@/ui/CartProvider";
 import { OrderSummary } from "./OrderSummary";
+import Image from "next/image";
 
 export const CartFilled = () => {
     const {
@@ -80,14 +81,13 @@ export const CartFilled = () => {
                     borderRadius: "5px",
                 }}
             >
-                <img
+                <Image
                     src="/assets/images/icon-carbon-neutral.svg"
                     alt="carbon-icon"
-                    style={{
-                        width: "20px",
-                        height: "auto"
-                    }}
+                    width={"20"}
+                    height = {"20"}
                 />
+                
                 <Typography fontSize={"14px"}>
                     This is a
                     <Typography

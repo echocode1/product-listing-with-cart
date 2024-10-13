@@ -1,5 +1,6 @@
 import { Box, Stack, Typography} from "@mui/material";
 import { OrderSummaryProps } from "@/ui/types/type";
+import Image from "next/image";
 
 export const OrderSummary = ({
     Data, 
@@ -27,7 +28,7 @@ export const OrderSummary = ({
             {Data.map((item, index) => {
                 if(isAddedToCart[index]){
                     return(
-                        <Box margin={"20px 0"}>
+                        <Box margin={"20px 0"} key={index}>
                             <Stack direction={"row"} justifyContent={"space-between"} alignItems={"center"}>
                                 <Stack>
                                     <Typography fontWeight={600}>
@@ -50,7 +51,7 @@ export const OrderSummary = ({
                                         </Typography>
                                     </Typography>
                                 </Stack>
-
+                                
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width= "20"
