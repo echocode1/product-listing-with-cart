@@ -44,7 +44,7 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
     }
     function handleDecrement(index: number){
         setCount(prevCount => {
-            let newCount = [...prevCount];
+            const newCount = [...prevCount];
             if(newCount[index] > 1){
                 newCount[index] -= 1;
             }else {

@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { useCartContext } from "@/ui/CartProvider/index";
+import Image from "next/image";
 
 export const CartEmpty = () => {
     const {count,  isAddedToCart} = useCartContext();
@@ -33,13 +34,11 @@ export const CartEmpty = () => {
                 Your Cart ({totalCount}) 
             </Typography>
 
-            <img 
+            <Image 
                 src="/assets/images/illustration-empty-cart.svg" 
                 alt="empty-cart-icon" 
-                style={{
-                    width: "128px",
-                    height: "auto",
-                }}
+                width={128}
+                height={128}
             />
 
             <Typography

@@ -1,6 +1,6 @@
 import { Box, Stack, Typography} from "@mui/material";
 import { OrderSummaryProps } from "@/ui/types/type";
-import Image from "next/image";
+/* eslint-disable rule-name */
 
 export const OrderSummary = ({
     Data, 
@@ -51,7 +51,7 @@ export const OrderSummary = ({
                                         </Typography>
                                     </Typography>
                                 </Stack>
-                                
+
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width= "20"
