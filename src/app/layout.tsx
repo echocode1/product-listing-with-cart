@@ -32,9 +32,12 @@ export default function RootLayout({
       <ThemeProvider theme={theme}>
         <CssBaseline />
             <body>
-              <CartProvider>
-                {children}
-              </CartProvider>
+              <main> 
+                <CartProvider>
+                  {children}
+                </CartProvider>    
+              </main>
+              
             </body>
       </ThemeProvider>
     </html>
