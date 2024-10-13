@@ -1,10 +1,11 @@
 "use client"
 import { Box, Stack, Typography,Button} from "@mui/material";
 import { useCartContext } from "@/ui/CartProvider";
+import Image from "next/image";
 import Link from "next/link";
 
 export const ComfirmOrder = () => {
-    let {
+    const {
         DessertName,
         Data,
         count, 
@@ -33,10 +34,12 @@ export const ComfirmOrder = () => {
         }}
         >
             <Stack>
-                <img 
+                <Image 
                     src="/assets/images/icon-order-confirmed.svg" 
                     alt="comfirm-order-icon"
-                    style={{ width: "40px", height: "auto",margin: "15px 0 20px" }} 
+                    width={40}
+                    height={40}
+                    style={{margin: "15px 0 20px" }} 
                 />
                 <Typography
                     sx={{
@@ -80,7 +83,7 @@ export const ComfirmOrder = () => {
                     {Data.map((item, index) => {
                         if(isAddedToCart[index]){
                             return(
-                                <Box margin={"20px 0"}>
+                                <Box margin={"20px 0"} key={index}>
                                     <Box 
                                         sx={{
                                             display: "grid",
@@ -88,13 +91,13 @@ export const ComfirmOrder = () => {
                                             alignItems: "center"
                                         }}
                                     >
-                                        <img 
+                                        <Image 
                                             src={item.image.thumbnail} 
                                             alt={item.category} 
+                                            height={60}
+                                            width={60}
                                             style={{
                                                 gridColumn: "1/2",
-                                                width: "60px",
-                                                height: "60px",
                                                 borderRadius: "5px"
                                             }}
                                         />
