@@ -17,9 +17,9 @@ export const ComfirmOrder = () => {
     return(
         <Box marginTop={"30px"}
         sx={{
-            height: { sm: "67%",lg: "700px" },
+            height: { sm: "67%",lg: "620px" },
             backgroundColor: "#ffff",
-            padding: {xs:"20px", md: "20px 40px"},
+            padding: {xs:"20px", md: "20px 30px"},
             borderTopLeftRadius: "15px",
             borderTopRightRadius: "15px",
             position: "fixed",
@@ -48,12 +48,11 @@ export const ComfirmOrder = () => {
                         lineHeight: "1.2",
                         letterSpacing: "0.8px",
                         color: "#260f08",
-                        marginBottom: "10px"
                     }}
                 >
                     Order Confirmed
                 </Typography>
-                <Typography color={"#ad8985"} sx={{marginBottom: {md: "20px"}}}>
+                <Typography color={"#ad8985"} sx={{marginBottom: {md: "10px"}}}>
                     We hope you enjoy your food!
                 </Typography>
             </Stack>
@@ -61,7 +60,7 @@ export const ComfirmOrder = () => {
             <Box 
                 sx={{
                     backgroundColor: "#fcf9f7",
-                    padding:"10px 20px 0 20px",
+                    padding:"0 20px 0 20px",
                     borderRadius: "5px"
                 }}
             >
@@ -83,7 +82,7 @@ export const ComfirmOrder = () => {
                     {Data.map((item, index) => {
                         if(isAddedToCart[index]){
                             return(
-                                <Box margin={"20px 0"} key={index}>
+                                <Box margin={"15px 0"} key={index}>
                                     <Box 
                                         sx={{
                                             display: "grid",
@@ -94,14 +93,14 @@ export const ComfirmOrder = () => {
                                         <Image 
                                             src={item.image.thumbnail} 
                                             alt={item.category} 
-                                            height={60}
-                                            width={60}
+                                            height={55}
+                                            width={55}
                                             style={{
                                                 gridColumn: "1/2",
                                                 borderRadius: "5px"
                                             }}
                                         />
-                                        <Stack marginLeft = {"15px"} sx={{ gridColumn: "2/5"}}>
+                                        <Stack sx={{ gridColumn: "2/5"}}>
                                             <Typography fontWeight={600}>
                                                 {DessertName.includes(item.name) && item.name}
                                             </Typography> 
@@ -142,7 +141,7 @@ export const ComfirmOrder = () => {
 
                 <Stack 
                     direction={"row"} justifyContent={"space-between"} alignItems={"center"}
-                    margin={"20px 0 45px"} paddingBottom={"25px"}
+                    margin={"0 0 15px"} paddingBottom={"25px"}
                 >
                     <Typography 
                         sx={{ wordSpacing: "5px",color: "#ad8985"}}>
