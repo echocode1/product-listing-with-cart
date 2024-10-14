@@ -20,7 +20,7 @@ export const DessertLayouts = () => {
                     lg: "85px 100px 65px 100px"
                 },
                 gap: "20px",
-                height: "1024px",
+                height: "100%",
             }}
         >
             <DessertData/>
